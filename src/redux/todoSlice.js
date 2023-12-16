@@ -9,7 +9,13 @@ export const todoSlice = createSlice({
     addTodos: (state, action) => {
       state.todos.push(action.payload);
     },
+    deleteTodos: (state, action) => {
+      return {
+        ...state,
+        todos: state.todos.filter(({ id }) => id !== action.payload),
+      };
+    },
   },
 });
 
-export const { addTodos } = todoSlice.actions;
+export const { addTodos, deleteTodos } = todoSlice.actions;

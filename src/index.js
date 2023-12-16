@@ -5,7 +5,8 @@ import 'modern-normalize';
 import { Provider } from 'react-redux';
 import { App } from 'components';
 import { GlobalStyles, theme } from 'styles';
-import  {store} from "redux/store"
+import { store } from './redux/store';
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
